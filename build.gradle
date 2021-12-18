@@ -1,0 +1,50 @@
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://nexus.gluonhq.com/nexus/content/repositories/releases/'
+    }
+}
+
+ext {
+    junitVersion = '5.7.1'
+}
+
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.example.login'
+    mainClass = 'com.example.login.HelloApplication'
+}
+
+javafx {
+    version = '11.0.2'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+
+
+dependencies {
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation 'com.gluonhq:charm-glisten:6.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
