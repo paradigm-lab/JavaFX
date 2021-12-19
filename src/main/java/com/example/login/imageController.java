@@ -12,7 +12,7 @@ public class imageController {
     @FXML
     Button myButton;
 
-    Image myImage = new Image(getClass().getResourceAsStream("pic5.jpg"));
+    Image myImage = new Image(getClass().getResourceAsStream("images/pic5.jpg"));
 
     @FXML
     public void displayImage() {
