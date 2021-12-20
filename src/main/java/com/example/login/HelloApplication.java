@@ -34,7 +34,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/images/imageScene.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("/fxml/imageScene.fxml"));
             stage.setTitle("Hello World");
             //stage.setScene(new Scene(root));
             Scene scene = new Scene(root);
@@ -46,11 +46,12 @@ public class HelloApplication extends Application {
             stage.setScene(scene);
             stage.show();
 
+            /*
             stage.setOnCloseRequest(event -> {
                 event.consume();
                 logout(stage);
             });
-
+            */
         }
         catch (Exception e){
             e.printStackTrace();
