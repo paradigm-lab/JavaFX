@@ -10,7 +10,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
 
@@ -34,7 +37,9 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("/fxml/imageScene.fxml"));
+            //URL url = new File("src/main/resources/com/example/fxmlLogin/fxml/imageScene.fxml").toURI().toURL();
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("/fxml/imageScene.fxml")));
+            //Parent root = FXMLLoader.load(url);
             stage.setTitle("Hello World");
             //stage.setScene(new Scene(root));
             Scene scene = new Scene(root);
