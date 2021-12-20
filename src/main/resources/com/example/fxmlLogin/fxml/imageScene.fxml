@@ -12,7 +12,7 @@
       <Button fx:id="myButton" layoutX="269.0" layoutY="362.0" mnemonicParsing="false" onAction="#displayImage" text="Button" />
       <ImageView fx:id="myimageView" fitHeight="303.0" fitWidth="540.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/pic5.jpg" />
+            <Image url="@../images/pic5.jpg" />
          </image>
       </ImageView>
    </children>

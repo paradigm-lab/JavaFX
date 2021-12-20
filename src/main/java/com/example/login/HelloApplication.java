@@ -34,7 +34,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("imageScene.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/images/imageScene.fxml"));
             stage.setTitle("Hello World");
             //stage.setScene(new Scene(root));
             Scene scene = new Scene(root);
