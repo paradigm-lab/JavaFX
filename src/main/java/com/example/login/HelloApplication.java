@@ -59,7 +59,9 @@ public class HelloApplication extends Application {
             */
         }
         catch (Exception e){
-            e.printStackTrace();
+            System.out.println("Exception on FXMLLoader.load()");
+            System.out.println(e.getMessage() );
+            //e.printStackTrace();
         }
 
     }
