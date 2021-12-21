@@ -38,6 +38,9 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         try {
             //URL url = new File("src/main/resources/com/example/fxmlLogin/fxml/imageScene.fxml").toURI().toURL();
+            /*
+            * The root object is where the exception is coming from
+             */
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("/fxml/imageScene.fxml")));
             //Parent root = FXMLLoader.load(url);
             //stage.setTitle("Hello World");
