@@ -43,16 +43,16 @@ public class HelloApplication extends Application {
              */
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("/fxml/imageScene.fxml")));
             //Parent root = FXMLLoader.load(url);
-            //stage.setTitle("Hello World");
-            //stage.setScene(new Scene(root));
-            //Scene scene = new Scene(root);
+            stage.setTitle("Hello World");
+            stage.setScene(new Scene(root));
+            Scene scene = new Scene(root);
             //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
             // Setting up the css file
             //String css = this.getClass().getResource("application.css").toExternalForm();
             //scene.getStylesheets().add(css);
-            //stage.setScene(scene);
-            //stage.show();
+            stage.setScene(scene);
+            stage.show();
 
             /*
             stage.setOnCloseRequest(event -> {
