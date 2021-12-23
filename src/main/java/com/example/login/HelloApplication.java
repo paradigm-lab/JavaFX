@@ -36,22 +36,24 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        try {
+//        try {
             //URL url = new File("src/main/resources/com/example/fxmlLogin/fxml/imageScene.fxml").toURI().toURL();
             /*
             * The root object is where the exception is coming from
              */
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("/fxml/imageScene.fxml")));
+            URL resourceUrl = getClass().getResource("fxml/imageScene.fxml");
+            System.out.println(resourceUrl);
+            Parent root = FXMLLoader.load(Objects.requireNonNull(resourceUrl));
             //Parent root = FXMLLoader.load(url);
             stage.setTitle("Hello World");
             stage.setScene(new Scene(root));
-            Scene scene = new Scene(root);
+//            Scene scene = new Scene(root);
             //scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
             // Setting up the css file
             //String css = this.getClass().getResource("application.css").toExternalForm();
             //scene.getStylesheets().add(css);
-            stage.setScene(scene);
+//            stage.setScene(scene);
             stage.show();
 
             /*
@@ -60,12 +62,12 @@ public class HelloApplication extends Application {
                 logout(stage);
             });
             */
-        }
-        catch (Exception e){
-            System.out.println("Exception on FXMLLoader.load()");
-            System.out.println(e.getMessage() );
-            //e.printStackTrace();
-        }
+//        }
+//        catch (Exception e){
+//            System.out.println("Exception on FXMLLoader.load()");
+//            System.out.println(e.getMessage() );
+//            //e.printStackTrace();
+//        }
 
     }
 }
